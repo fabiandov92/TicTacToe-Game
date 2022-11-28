@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Tic-tac-toe Game</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body class="th1">
+
+  <div class="main-container home-page ">
+    <!-- Top-DIV Starts -->
+    <div class="top-div-i">
+      <div class="title-text">
+        <h1>TIC-TAC-TOE</h1>
+      </div>
+      <div class="top-div-img">
+        <img class="title-img" src="images/X-th1.png" width="60" alt="">
+        <h4>VS</h4>
+        <img class="title-img" src="images/O-th1.png" width="60" alt="">
+      </div>
+    </div>
+    <!-- Top Div Ends -->
+
+    <!-- Middle-DIV Strat -->
+    <div class="middle-div-i">
+      <div class="box">
+        <div class="mid-text">
+          <h3>Select Player 1 Mark</h3>
+        </div>
+        <div class="mid-btn">
+          <div class="btn-wrapper">
+            <div class="btn-body">
+              <div class="btn-picker">
+
+              </div>
+            </div>
+            <div class="img-holder">
+              <img class="x-mid-img" src="images/X-th1.png" width="60" alt="">
+              <img class="o-mid-img" src="images/O-th1.png" width="60" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Middle-DIV Ends -->
+
+    <!-- Bottom-DIV Strat -->
+    <div class="bottom-div-i">
+      <div class="item-btn-cpu">
+        <h2>New Game (vs CPU)</h2>
+      </div>
+      <div class="item-btn-player">
+        <h2>New Game (vs Player 2)</h2>
+      </div>
+    </div>
+    <!-- Bottom-DIV Ends -->
+  </div>
+
+  <div class="main-container game-page not-display">
+    <div class="top-div-container">
+      <div class="top-div-1">
+        <div class="item-w not-shown">
+          <div class="item-w1">
+            <img class="winner-img" src="images/O-th1.png" width="60" alt="">
+          </div>
+          <div class="item-w1">
+            <p class="winner-p">WINs !!!</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="top-div-2">
+        <div class="item-t match-counter-btn">
+          <h4>MATCH #</h4>
+          <h5>1</h5>
+        </div>
+        <div class="item-t turn-btn">
+          <h4>TURN</h4>
+          <img class="turn-img" src="images/O-th1.png" width="45" alt="">
+        </div>
+        <div class="item-t restart-btn" onclick="show('restart-popup')">
+          <img src="images/R-th1.png" width="60" alt="">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="wrapper">
+      <div class="middle-div">
+        <div class="item spot11"><img src="" width="60" alt=""></div>
+        <div class="item spot12"><img src="" width="60" alt=""></div>
+        <div class="item spot13"><img src="" width="60" alt=""></div>
+        <div class="item spot21"><img src="" width="60" alt=""></div>
+        <div class="item spot22"><img src="" width="60" alt=""></div>
+        <div class="item spot23"><img src="" width="60" alt=""></div>
+        <div class="item spot31"><img src="" width="60" alt=""></div>
+        <div class="item spot32"><img src="" width="60" alt=""></div>
+        <div class="item spot33"><img src="" width="60" alt=""></div>
+      </div>
+      <div class="svg-comtainer not-display  ">
+        <svg class="svgLine" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <line x1="6.5" y1="15" x2="93" y2="15" stroke="#bea925" stroke-width="2.5" />
+        </svg>
+      </div>
+
+    </div>
+    <div class="bottom-div-container">
+      <div class="bottom-div-1">
+        <div class="item-b x-score">
+          <h4>X SCORE</h4>
+          <h5>0</h5>
+        </div>
+        <div class="item-b ties">
+          <h4>TIES</h4>
+          <h5>0</h5>
+        </div>
+        <div class="item-b o-score">
+          <h4>O SCORE</h4>
+          <h5>0</h5>
+        </div>
+      </div>
+      <div class="bottom-div-2 not-shown">
+        <div class="next-btn" onclick="show('next-popup')">
+          <h5>NEXT MATCH</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Restart Game Pupup -->
+  <div id="restart-popup" class="overlay-popup">
+    <div class="popup popup-restart">
+      <h3> RESTART GAME ? </h3>
+      <div class="popup-btn-container">
+       <div class="popup-btn cancel-btn" onclick="hide('restart-popup')">
+         <p>CANCEL</p>
+       </div>
+       <div class="popup-btn ok-reset" onclick="show('end-popup')" >
+         <p>OK</p>
+       </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Next Match Pupup -->
+  <div id="next-popup" class="overlay-popup">
+    <div class="popup popup-next">
+      <h3> NEXT MATCH ? </h3>
+      <div class="popup-btn-container">
+       <div class="popup-btn cancel-btn" onclick="hide('next-popup')">
+         <p>CANCEL</p>
+       </div>
+       <div class="popup-btn ok-next" onclick="hide('next-popup')">
+         <p>OK</p>
+       </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Game Winner Pupup -->
+  <div id="end-popup" class="overlay-popup">
+    <div class="popup popup-end">
+      <h3 class="final-h3"> GAME WINNER !!! </h3>
+      <div><img class="end-winner-img" src='images/X-th1.png' width="120" alt=""></div>
+      <div class="conf-gif1"><img src='images/conf.gif' width="120" alt=""></div>
+      <div class="conf-gif2"><img src='images/conf.gif' width="120" alt=""></div>
+      <div class="conf-gif3"><img src='images/conf.gif' width="120" alt=""></div>
+      <div class="popup-btn-container-end">
+       <div class="popup-btn ok-end">
+         <p>OK</p>
+       </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="attribution">
+    Coded by <a href="#">Fabian Dominguez</a>.
+  </div>
+  <script src="js/app.js" charset="utf-8"></script>
+</body>
+
+</html>
