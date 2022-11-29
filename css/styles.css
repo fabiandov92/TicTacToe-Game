@@ -1,8 +1,10 @@
-/* .attribution {
+.attribution {
   font-size: 11px;
   position: absolute;
   bottom: 10px;
-} */
+
+
+}
 
 :root {
   --key-background: #145369;
@@ -29,7 +31,6 @@ height: 500px;
 margin: 100px auto;
 margin-top: 0px;
 }
-
 
 .main-container {
   display: grid;
