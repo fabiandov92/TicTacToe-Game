@@ -197,7 +197,7 @@ function clearBorad(){
   document.querySelector(".turn-img").src = 'images/' + printImg + '-th1.png';
 
   for (let i = 0; i < 9; i++) {
-    document.querySelectorAll(".item")[i].firstChild.src = '';
+    document.querySelectorAll(".item")[i].firstChild.src = "";
     document.querySelectorAll(".item")[i].classList.remove("locked");
   }
 }
