@@ -198,7 +198,8 @@ function clearBorad(){
 
   for (let i = 0; i < 9; i++) {
     document.querySelectorAll(".item")[i].firstChild.src = "";
-    document.querySelectorAll(".item")[i].firstChild.width=0;
+    document.querySelectorAll(".item")[i].firstChild.width="0";
+    document.querySelectorAll(".item")[i].firstChild.height="0";
     document.querySelectorAll(".item")[i].classList.remove("locked");
   }
 }
