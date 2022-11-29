@@ -41,6 +41,8 @@ function printImage(length, item) {
   if (length != 3) {
 
     document.querySelector("." + item).firstChild.src = 'images/' + printImg + '-th1.png';
+    document.querySelector("." + item).firstChild.width="60";
+    document.querySelector("." + item).firstChild.height="60";
     document.querySelector("." + item).classList.add("locked");
 
     moves++;
