@@ -11,7 +11,7 @@
 
 body[class~="th1"] {
   background-color: var(--body-background);
-/*   overflow: hidden; */
+  overflow: hidden;
 }
 
 body {
