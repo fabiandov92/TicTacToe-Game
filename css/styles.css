@@ -23,6 +23,14 @@ body {
 
 }
 
+.container{
+width: 350px;
+height: 500px;
+margin: 100px auto;
+margin-top: 0px;
+}
+
+
 .main-container {
   display: grid;
   grid-template-columns: repeat(1, auto);
